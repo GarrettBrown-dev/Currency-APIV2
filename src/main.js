@@ -14,17 +14,17 @@ $(document).ready(function () {
   $('#conversionRate').submit(function () {
     event.preventDefault();
     let currency = $('select#base_code').val();
+  });
 
 
-    request.onreadystatechange = function () {
-      if (this.readyState === 4 && this.status === 200) {
-        const response = JSON.parse(this.responseText);
-        let currency = new Currency(response.base_code, response.conversion_rates);
-        currencyService.addCurrency(currency)
-        getElements(currencyService);
-      }
+  request.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      const response = JSON.parse(this.responseText);
+      let currency = new Currency(response.base_code, response.conversion_rates);
+      currencyService.addCurrency(currency)
+      getElements(currencyService);
     }
-  })
+  }
 
   request.open("GET", exchangeRateUrl, true);
   request.send();
