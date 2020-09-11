@@ -18,10 +18,10 @@ _This is intended as a proof of knowledge for week 6 at Epicodus. It shows knowl
 
 ## Setup/Installation Requirements
 
-* _Find index.html in included file._
-* _Head over to https://www.exchangerate-api.com/
+* _Head over to https://www.exchangerate-api.com/_
 * _Get a free (or paid) key by inputting your email when prompted._
-* _Place your new API key in all spots where "API*underscore*Key is used._
+* _Place your new API key in all spots where "API *underscore* Key is used._
+* _Find index.html in included file._
 * _drag and drop into a new tab in your browser._
 
 
