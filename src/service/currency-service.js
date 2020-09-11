@@ -1,7 +1,7 @@
 export default class CurrencyService {
   constuctor() {
-    this.currencyExchange = []
-    this.currentID = 0
+    this.currencyExchange = [];
+    this.currentID = 0;
   }
   addCurrency(currency) {
     currency.id = this.assignId();
@@ -15,9 +15,9 @@ export default class CurrencyService {
 
 
 export class Currency {
-  constructor(base_code, conversion_rates) {
-    this.base_code = baseCode
-    this.conversion_rates = conversionRates
+  constructor(baseCode, conversionRates) {
+    this.base_code = baseCode;
+    this.conversion_rates = conversionRates;
   }
 }
 
