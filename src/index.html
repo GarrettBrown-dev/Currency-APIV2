@@ -34,7 +34,6 @@
       const data = await res.json();
       const arrKeys = Object.keys(data.rates)
       const rates = data.rates;
-      console.log(rates)
 
       arrKeys.map(item => {
         return html += `<option value=${item}>${item}</option>`;
@@ -58,7 +57,6 @@
 
     };
 
-    currency();
   </script>
 
 

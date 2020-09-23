@@ -1,43 +1,32 @@
 import $ from 'jquery';
-// import CurrencyService, { Currency } from './service/currency-services';
+import CurrencyService, { Currency } from './service/currency-services';
 
+$(document).ready(function () {
+  async function currency() {
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    const arrKeys = Object.keys(data.rates)
+    const rates = data.rates;
 
-// $(document).ready(() => {
-//   $('#submit-add').click(async function (event) {
-//     event.preventDefault();
-//     const currency = $('select#currencies').val();
-//     const exchangeRateUrl = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${currency}`;
+    arrKeys.map(item => {
+      return html += `<option value=${item}>${item}</option>`;
+    });
 
-//     try {
-//       const response = await fetch(exchangeRateUrl);
-//       return response.json();
-//       if (currency === GBP)
-//         $currencyExchange
-//     } catch (error) {
-//       console.log("error: ", error);
-//       return error.message;
-//     }
+    for (let i = 0; i < select.length; i++) {
+      select[i].innerHTML = html;
+    }
 
-//   });
-// });
+    function convert(i, j) {
+      input[i].value = input[j].value * rates[select[i].value] / rates[select[j].value];
+    }
 
+    input[0].addEventListener('keyup', () => (1, 0))
 
+    input[1].addEventListener('keyup', () => (0, 1))
 
-// request.onreadystatechange = function (response) {
-//   if (this.readyState === 4 && this.status === 200) {
-//     const response = JSON.parse(this.response);
-//     let currency = new Currency(response.base_code, response.conversion_rates);
-//     currencyService.addCurrency(currency)
-//     getElements(currencyService);
-//   }
-// }
+    select[0].addEventListener('change', () => (1, 0));
 
-// request.open("GET", exchangeRateUrl, true);
-// request.send();
+    select[1].addEventListener('change', () => convert(0, 1));
 
-// function getElements(currencyService) {
-//   for (let i = 0; i < currencyService.length; i++) {
-//     $(`#result`).html(` <div id="$(currencyService[i].conversion_rates"></div>`)
-//     $("$(currencyService[i].conversion_rates").text$(currencyService[i].conversion_rates)
-//   }
-// }
+  }
+})
