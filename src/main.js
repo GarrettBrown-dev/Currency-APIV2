@@ -2,22 +2,24 @@ import $ from 'jquery';
 // import CurrencyService, { Currency } from './service/currency-services';
 
 
-$(document).ready(() => {
-  $('#submit-add').click(async function (event) {
-    event.preventDefault();
-    const currency = $('select#currencies').val();
-    const exchangeRateUrl = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${currency}`;
+// $(document).ready(() => {
+//   $('#submit-add').click(async function (event) {
+//     event.preventDefault();
+//     const currency = $('select#currencies').val();
+//     const exchangeRateUrl = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${currency}`;
 
-    try {
-      const response = await fetch(exchangeRateUrl);
-      const jsonResponse = await response.json();
-    } catch (error) {
-      console.log("error: ", error);
-      // alert("sup wit this error");
-    }
+//     try {
+//       const response = await fetch(exchangeRateUrl);
+//       return response.json();
+//       if (currency === GBP)
+//         $currencyExchange
+//     } catch (error) {
+//       console.log("error: ", error);
+//       return error.message;
+//     }
 
-  });
-});
+//   });
+// });
 
 
 

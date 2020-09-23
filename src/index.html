@@ -8,30 +8,38 @@
 </head>
 
 <body>
-  <div class="card">
-    <div class="container">
-      <form id="currency">
-        <label for="currencies">choose a currency to show the conversion rates.</label>
-        <select id="currencies" name="currencies">
-          <option value="USD">US Dollars</option>
-          <option value="GBP">British Pounds (Sterling.)</option>
-          <option value="SEK">Swedish Kroner</option>
-          <option value="NOK">Norwegian Krone</option>
-          <option value="MXN">Mexican Peso</option>
-        </select>
-        <button type="submit" class="btn btn-success" id="submit-add">add</button>
-      </form>
-    </div>
+  <h2>Currency Exchanger!</h2>
+  <div>
+    <input type="number">
+    <select>
+      <option value="currency">Currency</option>
+    </select>
   </div>
 
-  <div class="row">
-    <div class="col">
-      <div id="conversion">
-        <div class="card">
-          <div class="container">
-            <div id="currencyExchange"></div>
+  <div>
+    <input type="number">
+    <select>
+      <option value="currency">Currency</option>
+    </select>
+  </div>
 
-          </div>
+  <script>
+    const select = document.querySelectorAll('select');
+    const input = document.querySelectorAll('input');
+    const API_URL = " https://open.exchangerate-api.com/v6/latest";
+    let html = '';
+
+    async function currency() {
+      const res = await fetch(API_URL);
+      const data = await res.json();
+      console.log(data.rates)
+    }
+
+    currency();
+  </script>
+
+
+
 </body>
 
 </html>
