@@ -1,24 +1,7 @@
 export default class CurrencyService {
-  constuctor() {
-    //     this.currencyExchange = [];
-    //     this.currentID = 0;
-    //   }
-    //   addCurrency(currency) {
-    //     currency.id = this.assignId();
-    //     this.CurrencyService.push(currency);
-    //   }
-    //   assignId() {
-    //     this.currentID += 1;
-    //     return this.currentID;
-    //   }
-    // }
-
-
-    // export class Currency {
-    //   constructor(baseCode, conversionRates) {
-    //     this.base_code = baseCode;
-    //     this.conversion_rates = conversionRates;
-    //   }
-    // }
+  class CurrencyService {
+  const select = document.querySelectorAll('select');
+  const input = document.querySelectorAll('input');
+  const API_URL = "`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${currency}`;";
+    let html = '';
   }
-}
