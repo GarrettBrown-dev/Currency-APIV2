@@ -8,21 +8,16 @@
 
 _This is intended as a proof of knowledge for week 6 at Epicodus. It shows knowledge of API's and its uses through the use of a currency exchange API.
 
-// 1.) 
-// 2.) 
-// 
-//
-// 
-// 
-// 
+// 1.) Import assets properly from API -> displays all available currencies the API has stored.
+// 2.) User inputs number and chooses a currency -> calculates and displays properly.
+// 3.) User can change their currency to convert to after first calculation -> Also holds value when changed.
 
 ## Setup/Installation Requirements
 
-* _Head over to https://www.exchangerate-api.com/_
+* _Head over to https://www.exchangerate-api.com_
 * _Get a free (or paid) key by inputting your email when prompted._
 * _Place your new API key in all spots where "API *underscore* Key is used._
-* _Find index.html in included file._
-* _drag and drop into a new tab in your browser._
+* _Be sure to run npm install and npm run start to ensure you have the necessary files!_
 
 
 ## Known Bugs
